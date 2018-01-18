@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="01.css"/>
+	</head>
+	<body>
+		<div class="aa">
+			<div class="bb">
+				<img src="../day01/img/l1.jpg" class="a2"/>
+				<!--<img src="../day01/img/cp5.jpg" id="a2"/>
+				<img src="../day01/img/banner_1.jpg" id="a3"/>
+				<img src="../day01/img/banner_1.png" id="a4"/>-->
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+			
+		
+		<script type="text/javascript">
+			var html=document.documentElement;
+			var htmlw=html.getBoundingClientRect().width;
+			html.style.fontSize=htmlw/16+"px";
+			var n=1;
+			var m=1;
+			$(".bb").on("touchstart",function(){
+//				alert(1)
+                n++;
+                m++;
+                if(n>4){
+                	n=1;              	
+                }
+                if(m>4){
+                	console.log($(".a2").eq(0))
+                	$(".a2").eq(0).remove()
+                }
+				$(".bb").append("<img src='../day01/img/l"+n+".jpg' class='a2'>");
+				
+			})
+		</script>
+	</body>
+</html>
